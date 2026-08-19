@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Run `npm run configure -- --site-url=https://your-domain.example` before deployment. -->
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/batch-pdf-to-word-workflow.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/blog.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/cloud-pdf-to-word-workflow.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/contact.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/edit-pdf-in-word.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/faq.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/guides.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/keep-tables-images-pdf-to-word.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/merge-word-documents-guide.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/password-protected-pdf-to-word.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/pdf-to-word-without-losing-formatting.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/pdf-vs-docx-guide.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/privacy.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/reduce-pdf-file-size.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/safe-pdf-conversion.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/scanned-pdf-to-word-ocr-guide.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/terms.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/translate-pdf-to-word-guide.html</loc></url>
+  <url><loc>https://nabil-engr.github.io/pdf2word-converter/word-guides.html</loc></url>
 </urlset>
