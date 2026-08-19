@@ -8,17 +8,21 @@
   <meta name="description"
     content="A practical privacy checklist for converting PDFs that may contain confidential, personal or business information.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <link rel="canonical" href="https://example.com/safe-pdf-conversion.html">
+  <link rel="canonical" href="safe-pdf-conversion.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="How to handle sensitive PDFs safely | PDFOrbit">
   <meta property="og:description"
     content="A practical privacy checklist for converting PDFs that may contain confidential, personal or business information.">
-  <meta name="theme-color" content="#0B1020">
+  <meta property="og:image" content="assets/images/blog/formatting.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#0B1020">
   <link rel="stylesheet" href="assets/css/content.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to handle sensitive PDFs safely","description":"A practical privacy checklist for converting PDFs that may contain confidential, personal or business information.","image":"assets/images/blog/formatting.webp","dateModified":"2026-08-19","author":{"@type":"Organization","name":"PDFOrbit"},"publisher":{"@type":"Organization","name":"PDFOrbit"}}</script>
 </head>
 
 <body>
-  <header>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+<header>
     <div class="container nav">
       <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="20"
             height="20" fill="none" stroke="currentColor" stroke-width="2.2">
@@ -26,7 +30,7 @@
             <path d="M14 2v5h5" />
             <path d="M9 13h6M9 17h6" />
           </svg></span>PDFOrbit</a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">PDF to Word</a><a href="guides.html">Guides</a><a href="blog.html">Blog</a><a
           href="faq.html">FAQ</a>
       </nav>
@@ -44,7 +48,7 @@
         information.</p>
     </div>
   </section>
-  <main class="container content-wrap">
+  <main id="main-content" class="container content-wrap">
     <article class="article">
       <figure class="article-cover"><img src="assets/images/blog/security.webp" alt="Guide illustration" width="640"
           height="250"></figure>
@@ -58,10 +62,10 @@
         <li>Use a trusted network connection.</li>
       </ul>
       <h2>What a privacy-focused converter should do</h2>
-      <p>A strong design uses temporary processing, automatic cleanup, transport encryption, restricted server access
-        and clear retention rules.</p>
-      <div class='note'><strong>Site implementation note:</strong> Only claim automatic deletion if the backend actually
-        enforces it.</div>
+      <p>Local browser processing avoids transferring the document to a conversion server. When server processing is
+        unavoidable, look for transport encryption, restricted access, automatic cleanup and clear retention rules.</p>
+      <div class="note"><strong>PDFOrbit:</strong> Conversion runs locally in your browser, so the selected PDF and
+        generated DOCX are not sent to PDFOrbit.</div>
       <h2>After conversion</h2>
       <p>Download the result, verify it, and delete local temporary copies if the document is sensitive and you no
         longer need them.</p>
@@ -91,7 +95,7 @@
                 <path d="M14 2v5h5" />
                 <path d="M9 13h6M9 17h6" />
               </svg></span>PDFOrbit</a>
-          <p>Free online PDF to Word converter with simple, privacy-focused file processing.</p>
+          <p>Free PDF-to-Word text conversion that runs locally in your browser.</p>
         </div>
         <div>
           <h4>Resources</h4><a href="faq.html">FAQ</a><a href="guides.html">PDF Guides</a><a
@@ -110,6 +114,7 @@
       <div class="footer-bottom">© 2026 PDFOrbit. All rights reserved.</div>
     </div>
   </footer>
+    <script src="assets/js/site.js" defer></script>
 </body>
 
 </html>

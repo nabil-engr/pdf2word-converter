@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Privacy Policy | PDFOrbit</title>
     <meta name="description"
-        content="Privacy policy starter for PDFOrbit, including temporary file processing and technical data handling.">
+        content="How PDFOrbit handles PDF files, browser processing, technical logs, cookies and support requests.">
     <meta name="robots" content="index,follow,max-image-preview:large">
-    <link rel="canonical" href="https://example.com/privacy.html">
-    <meta property="og:type" content="article">
+    <link rel="canonical" href="privacy.html">
+    <meta property="og:type" content="website">
     <meta property="og:title" content="Privacy Policy | PDFOrbit">
     <meta property="og:description"
-        content="Privacy policy starter for PDFOrbit, including temporary file processing and technical data handling.">
+        content="How PDFOrbit handles PDF files, browser processing, technical logs, cookies and support requests.">
+    <meta property="og:image" content="assets/images/blog/formatting.webp">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#0B1020">
     <link rel="stylesheet" href="assets/css/content.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy | PDFOrbit","description":"How PDFOrbit handles PDF files, browser processing, technical logs, cookies and support requests."}</script>
 </head>
 
 <body>
-    <header>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+<header>
         <div class="container nav">
             <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"
                         width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2">
@@ -26,7 +30,7 @@
                         <path d="M14 2v5h5" />
                         <path d="M9 13h6M9 17h6" />
                     </svg></span>PDFOrbit</a>
-            <nav class="nav-links">
+            <nav class="nav-links" aria-label="Main navigation">
                 <a href="index.html">PDF to Word</a><a href="guides.html">Guides</a><a href="blog.html">Blog</a><a
                     href="faq.html">FAQ</a>
             </nav>
@@ -37,30 +41,32 @@
     <section class="hero">
         <div class="container"><span class="eyebrow">Legal</span>
             <h1>Privacy Policy</h1>
-            <p>A simple privacy-policy starter for a conversion service that does not keep a permanent user document
-                library.</p>
+            <p>How the browser-based converter handles documents and related technical information.</p>
         </div>
     </section>
-    <main class="container content-wrap">
+    <main id="main-content" class="container content-wrap">
         <article class="article">
-            <p><strong>Important:</strong> This is starter website copy, not legal advice. Update it to match your
-                actual hosting, analytics, logging, retention and third-party services before launch.</p>
-            <h2>Files you upload</h2>
-            <p>Uploaded documents should be processed only for the requested conversion. The production system should
-                use temporary storage and remove processing files automatically after the conversion finishes or
-                expires.</p>
+            <p><strong>Last updated:</strong> August 19, 2026.</p>
+            <h2>Your PDF files</h2>
+            <p>PDFOrbit processes PDF files locally in your web browser. The converter does not upload your PDF or the
+                generated DOCX file to PDFOrbit servers. Closing or refreshing the page clears the converter's active
+                in-memory state.</p>
             <h2>Account data</h2>
-            <p>The core service is designed without required user accounts, so no account profile is needed for standard
-                conversion.</p>
+            <p>The converter does not require an account and PDFOrbit does not maintain user profiles.</p>
             <h2>Technical data</h2>
-            <p>Servers may process standard technical information needed to operate and secure the service, such as IP
-                address, browser information, request timestamps and security logs. Define an appropriate retention
-                period in production.</p>
+            <p>The website's hosting provider may process standard request information such as IP address, browser type,
+                requested page, timestamp and security logs. That information is governed by the hosting provider's
+                policies and is not used by the converter to inspect document contents.</p>
             <h2>Analytics and cookies</h2>
-            <p>If analytics or advertising tools are added later, disclose them here and provide any consent controls
-                required for the regions you serve.</p>
+            <p>PDFOrbit currently includes no analytics, advertising, tracking scripts or application cookies. If that
+                changes, this policy and any required consent controls must be updated before those tools are enabled.</p>
+            <h2>Third-party support</h2>
+            <p>Support requests are handled through GitHub Issues. Information submitted there is sent to GitHub and is
+                normally public. Do not include PDF files, passwords, personal data or confidential information in an
+                issue.</p>
             <h2>Contact</h2>
-            <p>Publish a real support or privacy contact address before launch.</p>
+            <p>For a general privacy question, use the <a href="contact.html"><strong>contact page</strong></a> without
+                including sensitive information.</p>
         </article>
     </main>
 
@@ -74,7 +80,7 @@
                                 <path d="M14 2v5h5" />
                                 <path d="M9 13h6M9 17h6" />
                             </svg></span>PDFOrbit</a>
-                    <p>Free online PDF to Word converter with simple, privacy-focused file processing.</p>
+                    <p>Free PDF-to-Word text conversion that runs locally in your browser.</p>
                 </div>
                 <div>
                     <h4>Resources</h4><a href="faq.html">FAQ</a><a href="guides.html">PDF Guides</a><a
@@ -93,6 +99,7 @@
             <div class="footer-bottom">© 2026 PDFOrbit. All rights reserved.</div>
         </div>
     </footer>
+    <script src="assets/js/site.js" defer></script>
 </body>
 
 </html>

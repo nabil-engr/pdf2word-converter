@@ -5,21 +5,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>PDF to Word Converter – Free, Fast & Private | PDFOrbit</title>
+  <title>PDF to Word Converter – Free, Local & Private | PDFOrbit</title>
   <meta name="description"
-    content="Convert PDF to Word online for free. No signup, no permanent file storage, fast DOCX conversion, secure processing, and a clean mobile-friendly experience." />
+    content="Convert text-based PDF files to editable DOCX documents locally in your browser. Free, private, and no signup required." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <link rel="canonical" href="https://example.com/pdf-to-word" />
+  <link rel="canonical" href="./" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="PDF to Word Converter – Free, Fast & Private" />
+  <meta property="og:title" content="PDF to Word Converter – Free, Local & Private" />
   <meta property="og:description"
-    content="Convert PDF files to editable Word documents online. Free, fast, private and easy to use." />
-  <meta property="og:url" content="https://example.com/pdf-to-word" />
+    content="Convert text-based PDFs to editable Word documents locally in your browser." />
   <meta property="og:site_name" content="PDFOrbit" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#0B1020" />
+  <meta property="og:image" content="assets/images/blog/formatting.webp">
+    <meta name="theme-color" content="#0B1020" />
 
   <link rel="stylesheet" href="assets/css/home.css" />
 
@@ -30,8 +30,7 @@
     "name":"PDFOrbit PDF to Word Converter",
     "applicationCategory":"UtilitiesApplication",
     "operatingSystem":"Web",
-    "description":"A free online tool to convert PDF files to editable Word documents.",
-    "url":"https://example.com/pdf-to-word",
+    "description":"A free browser-based tool that extracts text from PDF files and creates editable DOCX documents locally on the user's device.",
     "offers":{
       "@type":"Offer",
       "price":"0",
@@ -42,7 +41,8 @@
 </head>
 
 <body>
-  <div class="topbar"><strong>100% free</strong> · No signup · No permanent file storage</div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="topbar"><strong>100% free</strong> · No signup · Files stay on your device</div>
 
   <header>
     <div class="container nav">
@@ -70,25 +70,25 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero" id="converter">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> Private by design · Always free</div>
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Local by design · Always free</div>
           <h1>Convert PDF to Word <span class="gradient-text">without the hassle.</span></h1>
-          <p class="lead">Turn your PDF into an editable DOCX document in a few clicks. No account, no confusing
-            settings, and no permanent file storage.</p>
+          <p class="lead">Extract editable text from a PDF into a DOCX document in a few clicks. Conversion runs on
+            your device, with no account or file upload.</p>
           <div class="hero-points" aria-label="Benefits">
             <span><i class="check">✓</i> Free to use</span>
             <span><i class="check">✓</i> No signup</span>
             <span><i class="check">✓</i> Mobile friendly</span>
-            <span><i class="check">✓</i> Privacy-first</span>
+            <span><i class="check">✓</i> Local conversion</span>
           </div>
         </div>
 
         <div>
           <div class="converter-shell">
-            <div class="upload-zone" id="dropZone" tabindex="0" role="button" aria-label="Upload PDF file">
+            <div class="upload-zone" id="dropZone">
               <div class="upload-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                   <path d="M12 16V4" />
@@ -99,17 +99,23 @@
               <h2>Drop your PDF here</h2>
               <p>or select a file from your device</p>
               <button class="btn btn-primary choose" id="chooseBtn" type="button">Choose PDF file</button>
-              <p class="small-note">PDF only · Recommended max size: 100 MB</p>
+              <p class="small-note">Text-based PDF · Maximum size: 50 MB</p>
               <input class="file-input" type="file" id="fileInput" accept="application/pdf,.pdf" />
             </div>
 
-            <div class="selected-file" id="selectedFile">
+            <div class="selected-file" id="selectedFile" aria-live="polite">
               <div class="file-badge">PDF</div>
               <div class="file-meta">
                 <div class="file-name" id="fileName">document.pdf</div>
                 <div class="file-size" id="fileSize">1.2 MB</div>
               </div>
               <button class="remove-file" id="removeFile" type="button" aria-label="Remove file">×</button>
+            </div>
+
+            <div class="converter-options">
+              <label for="pdfPassword">PDF password <span>(only if required)</span></label>
+              <input id="pdfPassword" type="password" autocomplete="current-password"
+                placeholder="Leave blank for unprotected PDFs" />
             </div>
 
             <div class="convert-row">
@@ -122,13 +128,16 @@
               </button>
             </div>
 
+            <progress id="conversionProgress" max="100" value="0" hidden>0%</progress>
+            <p class="conversion-status" id="conversionStatus" role="status" aria-live="polite"></p>
+
             <div class="trust-row">
               <div class="trust-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
                   <path d="m9 12 2 2 4-4" />
                 </svg>
-                No permanent storage
+                Files stay local
               </div>
               <div class="trust-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -136,21 +145,20 @@
                   <path d="M5 8h14" />
                   <path d="M5 16h14" />
                 </svg>
-                Free service
+                Free to use
               </div>
               <div class="trust-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="9" />
                   <path d="M12 7v5l3 2" />
                 </svg>
-                Fast processing
+                Editable text output
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    </div>
 
     <section id="how">
       <div class="container">
@@ -168,14 +176,13 @@
           </article>
           <article class="step-card">
             <div class="step-no">2</div>
-            <h3>Convert securely</h3>
-            <p>The file is processed for conversion without being added to a permanent document library or user profile.
-            </p>
+            <h3>Convert locally</h3>
+            <p>Your browser reads selectable text from the PDF and creates the Word document on your device.</p>
           </article>
           <article class="step-card">
             <div class="step-no">3</div>
             <h3>Download your Word file</h3>
-            <p>Get an editable DOCX file and continue working in Microsoft Word or another compatible editor.</p>
+            <p>Download the editable DOCX. Scans need OCR, and complex layouts may require manual adjustment.</p>
           </article>
         </div>
       </div>
@@ -212,8 +219,8 @@
               loading="lazy">
             <div class="resource-card-body">
               <div class="section-kicker">Formatting</div>
-              <h3>Keep tables and images when converting PDF to Word</h3>
-              <p>Practical checks for tables, images, captions and layout after conversion.</p><a
+              <h3>Review tables and images after PDF conversion</h3>
+              <p>Understand converter limitations and check tables, images, captions and layout afterward.</p><a
                 href="keep-tables-images-pdf-to-word.html">Read guide →</a>
             </div>
           </article>
@@ -262,13 +269,11 @@
         <div class="faq">
           <details>
             <summary>Is this PDF to Word converter free?</summary>
-            <p>Yes. The product is designed as a free converter with no required user account for the core PDF-to-Word
-              workflow.</p>
+            <p>Yes. Conversion is free and does not require an account.</p>
           </details>
           <details>
-            <summary>Do you keep uploaded PDF files?</summary>
-            <p>The production architecture should use temporary processing only and automatically delete temporary files
-              after the conversion is complete or the processing window expires.</p>
+            <summary>Do you upload or keep my PDF?</summary>
+            <p>No. The converter processes your PDF locally in your browser. The file is not sent to PDFOrbit.</p>
           </details>
           <details>
             <summary>Do I need to install software?</summary>
@@ -277,13 +282,12 @@
           </details>
           <details>
             <summary>What Word format will I get?</summary>
-            <p>The recommended output is DOCX because it is the current standard Word document format and is widely
-              supported by modern office applications.</p>
+            <p>You will receive a DOCX file containing the selectable text found in the PDF.</p>
           </details>
           <details>
             <summary>Will the Word file look exactly like the PDF?</summary>
-            <p>Conversion quality depends on the PDF. Text-based PDFs are usually easier to reconstruct than highly
-              complex layouts, scanned pages, uncommon fonts or image-heavy documents.</p>
+            <p>Not always. The converter prioritizes editable text. Complex layouts, tables, columns, images, and uncommon
+              fonts may need adjustment. Image-only scanned PDFs require OCR, which this converter does not perform.</p>
           </details>
         </div>
       </div>
@@ -301,7 +305,7 @@
                 <path d="M14 2v5h5" />
                 <path d="M9 13h6M9 17h6" />
               </svg></span>PDFOrbit</a>
-          <p>Free online PDF to Word converter with simple, privacy-focused file processing.</p>
+          <p>Free PDF-to-Word text conversion that runs locally in your browser.</p>
         </div>
         <div>
           <h4>Resources</h4><a href="faq.html">FAQ</a><a href="guides.html">PDF Guides</a><a
@@ -325,7 +329,8 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="assets/js/converter.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/converter.js" type="module"></script>
 </body>
 
 </html>

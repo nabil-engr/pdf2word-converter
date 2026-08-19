@@ -1,0 +1,21 @@
+{
+  "name": "pdforbit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "configure": "node scripts/configure-site.mjs",
+    "normalize": "node scripts/normalize-html.mjs",
+    "test": "node scripts/validate.mjs",
+    "check": "npm run build && npm test",
+    "serve": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "docx": "9.7.1",
+    "pdfjs-dist": "6.2.108"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

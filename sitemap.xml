@@ -1,23 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.com/</loc></url>
-  <url><loc>https://example.com/guides.html</loc></url>
-  <url><loc>https://example.com/word-guides.html</loc></url>
-  <url><loc>https://example.com/blog.html</loc></url>
-  <url><loc>https://example.com/faq.html</loc></url>
-  <url><loc>https://example.com/privacy.html</loc></url>
-  <url><loc>https://example.com/terms.html</loc></url>
-  <url><loc>https://example.com/contact.html</loc></url>
-  <url><loc>https://example.com/pdf-to-word-without-losing-formatting.html</loc></url>
-  <url><loc>https://example.com/scanned-pdf-to-word-ocr-guide.html</loc></url>
-  <url><loc>https://example.com/pdf-vs-docx-guide.html</loc></url>
-  <url><loc>https://example.com/edit-pdf-in-word.html</loc></url>
-  <url><loc>https://example.com/reduce-pdf-file-size.html</loc></url>
-  <url><loc>https://example.com/safe-pdf-conversion.html</loc></url>
-  <url><loc>https://example.com/keep-tables-images-pdf-to-word.html</loc></url>
-  <url><loc>https://example.com/password-protected-pdf-to-word.html</loc></url>
-  <url><loc>https://example.com/cloud-pdf-to-word-workflow.html</loc></url>
-  <url><loc>https://example.com/merge-word-documents-guide.html</loc></url>
-  <url><loc>https://example.com/translate-pdf-to-word-guide.html</loc></url>
-  <url><loc>https://example.com/batch-pdf-to-word-workflow.html</loc></url>
+  <!-- Run `npm run configure -- --site-url=https://your-domain.example` before deployment. -->
 </urlset>
